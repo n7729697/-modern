@@ -1,0 +1,33 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode
+% !Mode:: "TeX:UTF-8"
+\documentclass{setting}
+\usepackage{zh_CN-Adobefonts_external}
+\usepackage{linespacing_fix} % disable extra space before next section
+\usepackage{cite}
+\begin{document}
+\pagenumbering{gobble} % suppress displaying page number
+% \pagestyle{fancy}
+% \rfoot{\thepage\ of \pageref{LastPage}}
+
+%%%% 利用tikz来定位学校Logo，这部分没有遵守College logo positioning
+\begin{tikzpicture}[remember picture, overlay]
+  \node[anchor = north west] at ($(current page.north west)+(1.45cm, -0.45cm)$) {\includegraphics[width=2.5cm]{Picture/logo_KTH.png}};
+\end{tikzpicture}
+%%%% 利用tikz来定位照片
+\begin{tikzpicture}[remember picture, overlay]
+  \node[anchor = north east] at ($(current page.north east)+(-1.5cm, -0.5cm)$) {\includegraphics[height=3.5cm]{Picture/white.jpg}};
+\end{tikzpicture}%
+
+\name{牛雪芝}
+\basicInfo{\phone{(+46)764334132} \textperiodcentered\
+    \email{xuezhin@kth.se} \textperiodcentered\
+    % \email{xuezhiniu@163.com}
+    \github[n7729697]{https://github.com/n7729697}
+}
+
+\input{body}
+
+% \input{footer}
+
+\end{document}

@@ -1,0 +1,31 @@
+\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+\ProvidesPackage{zh_CN-Adobefonts_external}[2015/05/25 zh_CN-Adobefonts_external Package]
+\RequirePackage{fontspec}
+\RequirePackage{xeCJK}
+
+% https://github.com/boathit/CTEX/blob/master/texmf/tex/latex/ctex/fontset/ctex-xecjk-adobefonts.def
+% ctex-xecjk-adobefonts.def: Adobe 的 xeCJK 字体设置，为 Adobe 的四套字体
+% vim:ft=tex
+\defaultfontfeatures{Path = Font/zh_CN/, Mapping=tex-text}
+\setCJKmainfont[
+    BoldFont=OPPOSans-B.ttf,
+    ItalicFont=FZKTJW.ttf,
+    SmallCapsFont=OPPOSans-M.ttf
+]{AdobeSongStd-Light.otf}
+\setCJKsansfont{FZKTJ.otf}
+\setCJKmonofont{Pro_GB18030.ttf}
+
+\setCJKfamilyfont{zhsong}{AdobeSongStd-Light.otf}
+\setCJKfamilyfont{zhhei}{OPPOSans-R.ttf}
+\setCJKfamilyfont{zhfs}{AdobeFangsongStd-Regular.otf}
+\setCJKfamilyfont{zhkai}{FZKTJW.ttf}
+
+
+\newcommand*{\songti}{\CJKfamily{zhsong}} % 宋体
+\newcommand*{\heiti}{\CJKfamily{zhhei}}   % 黑体
+\newcommand*{\kaishu}{\CJKfamily{zhkai}}  % 楷书
+\newcommand*{\fangsong}{\CJKfamily{zhfs}} % 仿宋
+% \newcommand*{\lishu}{\CJKfamily{zhli}}    % 隶书
+% \newcommand*{\youyuan}{\CJKfamily{zhyou}} % 幼圆
+
+\endinput
