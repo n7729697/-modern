@@ -34,6 +34,7 @@
 \RequirePackage[super]{nth}
 %%%% kth Blue
 \definecolor{KTHBlue}{rgb}{0.10,0.33,0.65}
+\definecolor{grey1}{rgb}{0.4, 0.4, 0.42}
 
 %%% \widthof[]{} 用于特殊对齐
 \usepackage{calc}
@@ -61,7 +62,6 @@
 %   SmallCapsFont = Fontin-SmallCaps
 % ]{texgyretermes}
 
-
 \usepackage{relsize}
 \usepackage{xspace}
 
@@ -70,7 +70,7 @@
 	left=1.2cm,
 	right=1.2cm,
 	top=1.5cm,
-	bottom=1cm,
+	bottom=1.5cm,
 	nohead
 ]{geometry}
 \renewcommand{\baselinestretch}{1.2} %定义行间距1.2
@@ -118,8 +118,10 @@
   \centerline{\sffamily\large{#1}}
   \vspace{1.5ex}
 }
-\newcommand{\name}[1]{
+\newcommand{\name}[2]{
+  \vspace{-1.5ex}
   \centerline{\Huge\scshape{#1}}
+  \centerline{\Large\scshape{#2}}
   \vspace{1.25ex}
 }
 
@@ -166,6 +168,7 @@
     {#1 \quad #2 \quad #3}
 }
 
+% \RequirePackage{etoolbox}
 % \newif\if@displaypagenumbers\@displaypagenumberstrue
 % \newcommand*{\nopagenumbers}{\@displaypagenumbersfalse}
 % \AtEndPreamble{%
@@ -178,5 +181,5 @@
 %           \fancypagestyle{plain}{%
 %             \fancyfoot[r]{\parbox[b]{\pagenumberwidth}{\color{color2}\addressfont\itshape\strut\thepage/\pageref{lastpage}}}}% the parbox is required to ensure alignment with a possible center footer (e.g., as in the casual style)
 %           \pagestyle{plain}}{}}%
-%       \AtEndDocument{\label{lastpage}}\else\fi}}
-% \pagestyle{plain}
+%     \AtEndDocument{\label{lastpage}}\else\fi}}
+
