@@ -6,7 +6,7 @@
 \usepackage{linespacing_fix} % disable extra space before next section
 \usepackage{cite}
 \usepackage{fancyhdr}
-\definecolor{grey1}{rgb}{0.4, 0.4, 0.42}
+\definecolor{grey1}{RGB}{0,0,97}
 
 \begin{document}
 % \pagenumbering{gobble} % suppress displaying page number
@@ -25,7 +25,7 @@
 
 %%%% 利用tikz来定位学校Logo，这部分没有遵守College logo positioning
 \begin{tikzpicture}[remember picture, overlay]
-  \node[anchor = north west] at ($(current page.north west)+(1.45cm, -0.45cm)$) {\includegraphics[width=2.5cm]{Picture/logo_KTH.png}};
+  \node[anchor = north west] at ($(current page.north west)+(1cm, -0.45cm)$) {\includegraphics[width=2.5cm]{Picture/KTH_logo_CMYK_bla.eps}};
 \end{tikzpicture}
 %%%% 利用tikz来定位照片
 \begin{tikzpicture}[remember picture, overlay]
@@ -33,7 +33,7 @@
 \end{tikzpicture}%
 
 \name{牛雪芝}{}
-\basicInfo{\phone{(+86)19382135251} \textperiodcentered\
+\basicInfo{\phone{(+86) 19382135251} \textperiodcentered\
     \email{xuezhiniu@163.com} \textperiodcentered\
     % \email{xuezhin@kth.se}
     \github[n7729697]{https://github.com/n7729697}
